@@ -13,7 +13,9 @@ import {
   getCurrentPositionAsync
 } from "expo-location";
 import { MaterialIcons } from "@expo/vector-icons";
+
 import api from "../services/api";
+import { connect, disconnect, subscribeToNewDevs } from "../services/socket";
 
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
@@ -28,6 +30,7 @@ function Main({ navigation }) {
         const { coords } = await getCurrentPositionAsync({
           enableHighAccuracy: true
         });
+
         const { latitude, longitude } = coords;
 
         setCurrentRegion({
@@ -42,8 +45,21 @@ function Main({ navigation }) {
     loadInitialPosition();
   }, []);
 
+  useEffect(() => {
+    subscribeToNewDevs(dev => setDevs([...devs, dev]));
+  }, [devs]);
+
+  function setupWebsocket() {
+    disconnect();
+
+    const { latitude, longitude } = currentRegion;
+
+    connect(latitude, longitude, techs);
+  }
+
   async function loadDevs() {
     const { latitude, longitude } = currentRegion;
+
     const response = await api.get("/search", {
       params: {
         latitude,
@@ -51,7 +67,9 @@ function Main({ navigation }) {
         techs
       }
     });
+
     setDevs(response.data.devs);
+    setupWebsocket();
   }
 
   function handleRegionChanged(region) {
@@ -77,12 +95,8 @@ function Main({ navigation }) {
               latitude: dev.location.coordinates[1]
             }}
           >
-            <Image
-              style={styles.avatar}
-              source={{
-                uri: dev.avatar_url
-              }}
-            />
+            <Image style={styles.avatar} source={{ uri: dev.avatar_url }} />
+
             <Callout
               onPress={() => {
                 navigation.navigate("Profile", {
@@ -99,11 +113,10 @@ function Main({ navigation }) {
           </Marker>
         ))}
       </MapView>
-
       <View style={styles.searchForm}>
         <TextInput
           style={styles.searchInput}
-          placeholder="Buscar..."
+          placeholder="Buscar devs por techs..."
           placeholderTextColor="#999"
           autoCapitalize="words"
           autoCorrect={false}
@@ -112,7 +125,7 @@ function Main({ navigation }) {
         />
 
         <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
-          <MaterialIcons name="my-location" size={20} color={"#FFF"} />
+          <MaterialIcons name="my-location" size={20} color="#FFF" />
         </TouchableOpacity>
       </View>
     </>
@@ -128,7 +141,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
-    borderWidth: 2,
+    borderWidth: 4,
     borderColor: "#FFF"
   },
 
@@ -156,12 +169,10 @@ const styles = StyleSheet.create({
     left: 20,
     right: 20,
     zIndex: 5,
-    display: "flex",
     flexDirection: "row"
   },
 
   searchInput: {
-    marginBottom: 30,
     flex: 1,
     height: 50,
     backgroundColor: "#FFF",
@@ -175,13 +186,13 @@ const styles = StyleSheet.create({
       width: 4,
       height: 4
     },
-    elevation: 3
+    elevation: 2
   },
 
   loadButton: {
     width: 50,
     height: 50,
-    backgroundColor: "#8E4DFF",
+    backgroundColor: "#8E4Dff",
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",

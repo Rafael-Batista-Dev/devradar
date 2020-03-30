@@ -22,7 +22,6 @@ module.exports = {
       }
     });
 
-    console.log(techArray);
     //Buscar todos os devs num raio  10km
     //Filtro por tecnologia
     return response.json({ devs });

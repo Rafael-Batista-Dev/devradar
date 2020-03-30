@@ -1,8 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const http = require("http");
+
 const routes = require("./routes");
+const { setupWebsocket } = require("./websocket");
+
 const app = express();
+const server = http.Server(app);
+
+setupWebsocket(server);
 
 mongoose.connect(
   "mongodb+srv://rafa:qwe123@cluster0-oj5wi.mongodb.net/dbconectdev?retryWrites=true&w=majority",
@@ -25,6 +32,6 @@ DELETE = UM VALOR
 //Route Params: Manipula um valor usando o PUT OU DELETE
 //Bady: request.body(Dados para criação oualteração de um registro)
 
-app.listen(3333, () => {
+server.listen(3333, () => {
   console.log("Server Online!");
 });
