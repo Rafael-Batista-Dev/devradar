@@ -1,6 +1,4 @@
 <center>
-	<img src="https://github.com/Rafael-Batista-Dev/devconect/blob/master/midia/devradar.jpg/></center>
-
 <h4 align="center"> 
 	🚀 Semana OmniStack 10
 </h4>
