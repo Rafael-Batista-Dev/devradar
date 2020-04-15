@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<center>
+	<img src="logo/></center>
 
-## Available Scripts
+<h4 align="center"> 
+	🚀 Semana OmniStack 10
+</h4>
+<h4 align="center"> 
+	🚀 Aplicativo desenvolvido durante a semana OmniStack 10 pela Rocketseat 🚀
+</h4>
 
-In the project directory, you can run:
+<p align="center">
+	  
+  
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"> 
+<p>
 
-### `yarn start`
+<p align="center">
+  Projeto |
+  Tecnologias |
+  Licença
+</p>
+<p>&nbsp;&nbsp;</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p>&nbsp;&nbsp;</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 💻 Project
 
-### `yarn test`
+Esta aplicação irá mapear desenvolvedores por tecnologias, após o cadastro na aplicação web que consome a Api do github. Com o cadastro realizado, os devs puderam ser consultados na aplicação mobile que consome a Api de geolocalização, onde são mapeados em uma raio de 10km calculando a latitude e longitude.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![aplicacao](png)
 
-### `yarn build`
+## :rocket: Technologies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was developed with the following technologies:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :memo: Meta
 
-### `yarn eject`
+Rafael Batista – [@RafaelBatista](www.linkedin.com/in/rafael-batista-dev) – rafaelbatista.sth@gmail.com
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[https://github.com/Rafael-Batista-Dev](https://github.com/Rafael-Batista-Dev/)
