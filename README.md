@@ -1,5 +1,5 @@
 <center>
-	<img src="logo/></center>
+	<img src="https://github.com/Rafael-Batista-Dev/devconect/blob/master/midia/devradar.jpg/></center>
 
 <h4 align="center"> 
 	🚀 Semana OmniStack 10
@@ -27,7 +27,7 @@
 
 Esta aplicação irá mapear desenvolvedores por tecnologias, após o cadastro na aplicação web que consome a Api do github. Com o cadastro realizado, os devs puderam ser consultados na aplicação mobile que consome a Api de geolocalização, onde são mapeados em uma raio de 10km calculando a latitude e longitude.
 
-![aplicacao](png)
+![aplicacao](https://github.com/Rafael-Batista-Dev/devconect/blob/master/midia/devradar.gif)
 
 ## :rocket: Technologies
 
