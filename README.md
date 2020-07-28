@@ -72,7 +72,7 @@ Este projeto esta sobe a licença MIT. Veja a [LICENÇA](license) para saber mai
 
 Feito com ❤️ por Rafael Batista 👋🏽 [Entre em contato!](www.linkedin.com/in/rafa-dev)
 
-:email: dev.rafaelbatista.@gmail.com
+:email: dev.rafaelbatista@gmail.com
 :octocat: Github –[https://github.com/](https://github.com/Rafael-Batista-Dev)
 
 [nodejs]: https://nodejs.org/
