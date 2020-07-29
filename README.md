@@ -1,7 +1,7 @@
 <center>
-<h4 align="center"> 
+<h1 align="center"> 
 	🚀 Semana OmniStack 10
-</h4>
+</h1>
 <h4 align="center"> 
 	🚀 Aplicativo desenvolvido durante a semana OmniStack 10 pela Rocketseat 🚀
 </h4>
@@ -15,7 +15,6 @@
   Tecnologias |
   Licença
 </p>
-<p>&nbsp;&nbsp;</p>
 
 <p>&nbsp;&nbsp;</p>
 
@@ -24,7 +23,7 @@
 Esta aplicação irá mapear desenvolvedores por tecnologias, após o cadastro na aplicação web que consome a Api do github. Com o cadastro realizado, os devs puderam ser consultados na aplicação mobile que consome a Api de geolocalização, onde são mapeados em uma raio de 10km calculando a latitude e longitude.
 
 <p align="center" width= '90%'>
-<img alt="MarvelQuiz" title="#MarvelQuiz" src="https://github.com/Rafael-Batista-Dev/devconect/blob/master/midia/devradar.gif" />
+<img alt="devradar" title="#devradar" src="https://github.com/Rafael-Batista-Dev/devradar/blob/master/midia/devradar.gif" />
 </p>
 
 ## 🛠 Tecnologias
@@ -38,7 +37,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🚀 Como rodar este projeto
 
-Este projeto considerar apenas em uma parte:
+Este projeto considerar em 3 partes:
 
 ### Pré-requisitos
 
